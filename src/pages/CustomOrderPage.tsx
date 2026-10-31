@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Sparkles, Send, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 import { generateWhatsAppUrl } from '../utils/checkout';
+import { assetUrl } from '../utils/assets';
 
 interface FormData {
   name: string;
@@ -295,6 +296,23 @@ export default function CustomOrderPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Visual showcase card */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-taupe/15 shadow-sm">
+              <div className="relative aspect-[4/3] overflow-hidden bg-cream">
+                <img
+                  src={assetUrl('/images/products/bloomy_glow_hand_wrapped.jpg')}
+                  alt="Custom gift wrapped candles"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <p className="font-serif text-sm font-bold text-chocolate mb-1">Bespoke Ribbon Gift Wrapping</p>
+                <p className="text-xs text-muted-brown leading-relaxed">
+                  Every custom favour is individually cellophane-wrapped with soft lavender satin bows and personal gift notes.
+                </p>
+              </div>
             </div>
           </div>
         </div>

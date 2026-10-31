@@ -91,7 +91,7 @@ const rawProducts: Product[] = [
     slug: 'rose-petal-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A delicate miniature candle shot infused with dried rose petals and a soft floral fragrance. Perfect as a thoughtful gift or intimate ambient light.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_seven_overhead.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_assorted_shots.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -111,7 +111,7 @@ const rawProducts: Product[] = [
     slug: 'citrus-burst-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A zesty miniature candle shot with citrus essential oils and a bright, uplifting aroma in a sleek glass votive.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_angle_flatlay.jpg', '/images/products/bloomy_glow_seven_overhead.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -129,7 +129,7 @@ const rawProducts: Product[] = [
     slug: 'vanilla-dream-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A warm, comforting miniature candle with creamy vanilla fragrance and subtle golden shimmer.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_packaging.jpg', '/images/products/bloomy_glow_seven_diagonal.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -147,7 +147,7 @@ const rawProducts: Product[] = [
     slug: 'jasmine-moonlight-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'An enchanting miniature candle with rich jasmine fragrance and handcrafted colored wax layers.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_seven_overhead.jpg', '/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 169,
     priceOnRequest: false,
     variants: [
@@ -167,7 +167,7 @@ const rawProducts: Product[] = [
     slug: 'classic-pillar-candle',
     category: 'solid-candles',
     description: 'A classic solid candle poured in an elegant flared glass shot, with a clean, extended burn time and premium fragrance.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_seven_overhead.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 199,
     priceOnRequest: false,
     variants: [
@@ -187,7 +187,7 @@ const rawProducts: Product[] = [
     slug: 'rustic-cube-candle',
     category: 'solid-candles',
     description: 'Hand-poured solid candle infused with vibrant yellow wax and fine sparkle accents for an uplifting room ambiance.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_seven_diagonal.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 249,
     priceOnRequest: false,
     variants: [
@@ -205,7 +205,7 @@ const rawProducts: Product[] = [
     slug: 'sphere-glow-candle',
     category: 'solid-candles',
     description: 'A shimmering solid candle crafted with fine celestial sparkle on top and soothing fragrance.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_seven_diagonal.jpg', '/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 249,
     priceOnRequest: false,
     variants: [
@@ -225,7 +225,7 @@ const rawProducts: Product[] = [
     slug: 'sunset-gradient-candle',
     category: 'customised-layered',
     description: 'A stunning multi-layered handcrafted candle with custom color transitions (blue, coral, sunny yellow) and a sparkling star-dust wax topping.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_assorted_shots.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/bloomy_glow_seven_overhead.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 349,
     priceOnRequest: false,
     variants: [
@@ -257,7 +257,7 @@ const rawProducts: Product[] = [
     slug: 'marble-swirl-candle',
     category: 'customised-layered',
     description: 'Bespoke hand-poured glass shot with rich dual-tone layers topped with sparkling cosmetic-grade wax glitter.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_assorted_shots.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 299,
     priceOnRequest: false,
     variants: [
@@ -282,7 +282,7 @@ const rawProducts: Product[] = [
     slug: 'personalised-photo-candle',
     category: 'customised-layered',
     description: 'Design your own custom candle! Choose your color palette, glitter finish, and personalized message card for wedding favors or celebrations.',
-    images: ['/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/bloomy_glow_assorted_shots.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: null,
     priceOnRequest: true,
     variants: [],
@@ -417,7 +417,7 @@ const rawProducts: Product[] = [
     slug: 'festive-essentials-hamper',
     category: 'diwali-hampers',
     description: 'Our bestselling festive gift hamper in a floral window box. Includes 1 pair of handcrafted big diya, 1 pair of decorated matka diya, and 1 scented candle, packed with sparkling shred filler and a handwritten greeting card.',
-    images: ['/images/products/diwali_hamper_boxes.jpg', '/images/products/diwali_hamper_contents.jpg', '/images/products/diwali_hamper_bulk.jpg', '/images/catalog/diwali_hampers_catalog.jpg'],
+    images: ['/images/products/diwali_hamper_boxes.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/diwali_hamper_contents.jpg', '/images/products/diwali_hamper_bulk.jpg', '/images/catalog/diwali_hampers_catalog.jpg'],
     price: 649,
     priceOnRequest: false,
     variants: [
@@ -443,7 +443,7 @@ const rawProducts: Product[] = [
     slug: 'grand-celebration-hamper',
     category: 'diwali-hampers',
     description: 'Premium curated gift hampers designed for corporate gifting, family celebrations, and wedding favors. For bulk orders, prices are customized as per quantity and requirements.',
-    images: ['/images/products/diwali_hamper_bulk.jpg', '/images/products/diwali_hamper_boxes.jpg', '/images/catalog/bulk_orders_catalog.jpg'],
+    images: ['/images/products/diwali_hamper_bulk.jpg', '/images/products/bloomy_glow_hand_wrapped.jpg', '/images/products/diwali_hamper_boxes.jpg', '/images/catalog/bulk_orders_catalog.jpg'],
     price: null,
     priceOnRequest: true,
     variants: [],
