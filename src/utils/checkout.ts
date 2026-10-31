@@ -108,6 +108,6 @@ export async function copyToClipboard(text: string): Promise<boolean> {
 export const INSTAGRAM_URL = 'https://www.instagram.com/bloomandglow24_/';
 export const INSTAGRAM_HANDLE = '@bloomandglow24_';
 export const WHATSAPP_DISPLAY = '+91 78418 34995';
-export const EMAIL = 'bloomandglow24@gmail.com';
+export const EMAIL = 'bloomandglow27@gmail.com';
 export const BRAND_TAGLINE = 'Bloom into calm, glow into joy';
 
