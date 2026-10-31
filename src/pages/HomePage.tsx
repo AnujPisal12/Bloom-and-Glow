@@ -74,15 +74,15 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Overlapping top-right polaroid: Bloom Light candles */}
+                {/* Overlapping top-right polaroid: Bloomlit Festive Diyas */}
                 <div className="absolute -top-3 -right-2 sm:-right-4 w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-6 hover:rotate-2 transition-transform duration-300">
                   <img
-                    src={assetUrl('/images/products/bloom_light_tray.jpg')}
-                    alt="Bloom Light Candles"
+                    src={assetUrl('/images/products/bloomlit_diyas_festive.jpg')}
+                    alt="Bloomlit Festive Diyas"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-1.5 right-2 bg-chocolate/85 text-ivory text-[10px] font-medium px-2.5 py-0.5 rounded-full backdrop-blur-sm">
-                    Bloom Light
+                    Festive Diyas
                   </div>
                 </div>
 

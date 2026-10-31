@@ -58,7 +58,7 @@ const rawCategories: CategoryInfo[] = [
     slug: 'bloomlit-diyas',
     name: 'Bloomlit Diyas',
     description: 'Hand-decorated artisanal diyas with golden scalloped rims, tassels, and scented wax.',
-    image: '/images/products/bloomlit_diyas_scalloped.jpg',
+    image: '/images/products/bloomlit_diyas_festive.jpg',
   },
   {
     slug: 'diwali-hampers',
@@ -91,7 +91,7 @@ const rawProducts: Product[] = [
     slug: 'rose-petal-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A delicate miniature candle shot infused with dried rose petals and a soft floral fragrance. Perfect as a thoughtful gift or intimate ambient light.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -111,7 +111,7 @@ const rawProducts: Product[] = [
     slug: 'citrus-burst-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A zesty miniature candle shot with citrus essential oils and a bright, uplifting aroma in a sleek glass votive.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -129,7 +129,7 @@ const rawProducts: Product[] = [
     slug: 'vanilla-dream-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'A warm, comforting miniature candle with creamy vanilla fragrance and subtle golden shimmer.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 149,
     priceOnRequest: false,
     variants: [
@@ -147,7 +147,7 @@ const rawProducts: Product[] = [
     slug: 'jasmine-moonlight-glow-shot',
     category: 'bloomy-glow-shots',
     description: 'An enchanting miniature candle with rich jasmine fragrance and handcrafted colored wax layers.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 169,
     priceOnRequest: false,
     variants: [
@@ -167,7 +167,7 @@ const rawProducts: Product[] = [
     slug: 'classic-pillar-candle',
     category: 'solid-candles',
     description: 'A classic solid candle poured in an elegant flared glass shot, with a clean, extended burn time and premium fragrance.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 199,
     priceOnRequest: false,
     variants: [
@@ -187,7 +187,7 @@ const rawProducts: Product[] = [
     slug: 'rustic-cube-candle',
     category: 'solid-candles',
     description: 'Hand-poured solid candle infused with vibrant yellow wax and fine sparkle accents for an uplifting room ambiance.',
-    images: ['/images/products/bloomy_glow_solid.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_solid.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 249,
     priceOnRequest: false,
     variants: [
@@ -225,7 +225,7 @@ const rawProducts: Product[] = [
     slug: 'sunset-gradient-candle',
     category: 'customised-layered',
     description: 'A stunning multi-layered handcrafted candle with custom color transitions (blue, coral, sunny yellow) and a sparkling star-dust wax topping.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: 349,
     priceOnRequest: false,
     variants: [
@@ -282,7 +282,7 @@ const rawProducts: Product[] = [
     slug: 'personalised-photo-candle',
     category: 'customised-layered',
     description: 'Design your own custom candle! Choose your color palette, glitter finish, and personalized message card for wedding favors or celebrations.',
-    images: ['/images/products/bloomy_glow_layered.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
+    images: ['/images/products/bloomy_glow_gift_set.jpg', '/images/products/bloomy_glow_layered.jpg', '/images/products/bloomy_glow_packaging.jpg', '/images/catalog/bloomy_glow_shots_catalog.jpg'],
     price: null,
     priceOnRequest: true,
     variants: [],
@@ -363,7 +363,7 @@ const rawProducts: Product[] = [
     slug: 'traditional-bloom-diya',
     category: 'bloomlit-diyas',
     description: 'Authentic handcrafted festive diya with intricate scalloped golden rim, shimmering gold dust wax, and festive bright tassel detailing.',
-    images: ['/images/products/bloomlit_diyas_tassel.jpg', '/images/products/bloomlit_diyas_scalloped.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
+    images: ['/images/products/bloomlit_diyas_tassel.jpg', '/images/products/bloomlit_diyas_festive.jpg', '/images/products/bloomlit_diyas_scalloped.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
     price: 199,
     priceOnRequest: false,
     variants: [
@@ -381,7 +381,7 @@ const rawProducts: Product[] = [
     slug: 'lotus-petal-diya',
     category: 'bloomlit-diyas',
     description: 'Pair of artisanal golden scalloped rim diyas poured with organic wax, dried botanical petals, and fine golden shimmer. A Diwali centerpiece favorite.',
-    images: ['/images/products/bloomlit_diyas_scalloped.jpg', '/images/products/bloomlit_diyas_tassel.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
+    images: ['/images/products/bloomlit_diyas_scalloped.jpg', '/images/products/bloomlit_diyas_festive.jpg', '/images/products/bloomlit_diyas_tassel.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
     price: 249,
     priceOnRequest: false,
     variants: [
@@ -399,7 +399,7 @@ const rawProducts: Product[] = [
     slug: 'floating-bloom-diya-set',
     category: 'bloomlit-diyas',
     description: 'Set of 4 handcrafted Diwali diyas with ornate golden borders and wax filling. Perfect for pooja mandirs, rangoli highlights, and festive gifting.',
-    images: ['/images/products/bloomlit_diyas_scalloped.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
+    images: ['/images/products/bloomlit_diyas_festive.jpg', '/images/products/bloomlit_diyas_scalloped.jpg', '/images/products/bloomlit_diyas_tassel.jpg', '/images/catalog/bloomlit_diyas_catalog.jpg'],
     price: 449,
     priceOnRequest: false,
     variants: [
