@@ -214,10 +214,10 @@ const rawProducts: Product[] = [
     available: true,
     tags: ['navratri', 'festive', 'raas glow', 'mirror work', 'bestseller'],
     featured: true,
-    newArrival: true,
+    newArrival: false,
   },
 
-  // ── 6. Sweet Box ───────────────────────────────────────────
+  // ── 6. Sweet Box (Coming Soon) ─────────────────────────────
   {
     id: 'sb-001',
     name: 'Sweet Box',
@@ -237,7 +237,7 @@ const rawProducts: Product[] = [
     available: true,
     tags: ['sweet box', 'gift', 'indian sweets', 'mithai'],
     featured: true,
-    newArrival: true,
+    newArrival: false,
   },
 ];
 

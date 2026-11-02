@@ -27,9 +27,7 @@ export default function CartPage() {
   const [customerDetails, setCustomerDetails] = useState(() => {
     try {
       const saved = localStorage.getItem(CUSTOMER_KEY);
-      if (saved) {
-        return { name: '', phone: '', address: '', notes: '', ...JSON.parse(saved) };
-      }
+      if (saved) return JSON.parse(saved);
     } catch {}
     return { name: '', phone: '', address: '', notes: '' };
   });

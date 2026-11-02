@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Minus, Plus, ArrowLeft, Clock, Check, ChevronRight, MessageCircle, Sparkles } from 'lucide-react';
 import { getProductBySlug, getProductsByCategory, formatPrice } from '../data/products';
@@ -26,17 +26,6 @@ export default function ProductDetailPage() {
     item => item.product.id === product?.id && (item.variant?.id ?? null) === (selectedVariant?.id ?? null)
   );
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-  // Reset page state whenever slug changes (e.g. clicking related products)
-  useEffect(() => {
-    if (product) {
-      setSelectedVariant(product.variants.length > 0 ? product.variants[0] : null);
-      setQuantity(1);
-      setCustomizations({});
-      setActiveImageIndex(0);
-      setIsAdded(false);
-    }
-  }, [slug]);
 
   if (!product) {
     return (
@@ -100,7 +89,7 @@ export default function ProductDetailPage() {
           <div className="animate-fade-in" id="product-gallery">
             <div className="aspect-square rounded-2xl overflow-hidden bg-cream border border-taupe/10">
               <img
-                src={product.images[activeImageIndex] || product.images[0]}
+                src={product.images[activeImageIndex]}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />

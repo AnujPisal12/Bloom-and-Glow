@@ -202,7 +202,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                 className="inline-flex items-center bg-chocolate text-ivory rounded-full shadow-md overflow-hidden p-0.5 border border-chocolate transition-all animate-fade-in"
               >
                 <button
-                  type="button"
                   onClick={handleDecrement}
                   className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-peach-dark active:scale-90 transition-all text-ivory"
                   aria-label={`Decrease ${product.name} quantity`}
@@ -215,7 +214,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </span>
 
                 <button
-                  type="button"
                   onClick={handleIncrement}
                   className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-peach-dark active:scale-90 transition-all text-ivory"
                   aria-label={`Increase ${product.name} quantity`}
@@ -225,7 +223,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             ) : (
               <button
-                type="button"
                 onClick={handleQuickAdd}
                 className={`btn-primary flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
                   isAdding
