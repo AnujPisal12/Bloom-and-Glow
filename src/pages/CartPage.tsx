@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Plus, Minus, Trash2, ShoppingBag, ArrowLeft, MessageCircle, ArrowRight, Copy, Check, ExternalLink } from 'lucide-react';
 import { Instagram } from '../components/Icons';
@@ -8,6 +8,8 @@ import { generateOrderSummary, generateWhatsAppUrl, copyToClipboard, INSTAGRAM_U
 
 type CheckoutStep = 'cart' | 'details' | 'review';
 type CheckoutChannel = 'whatsapp' | 'instagram' | null;
+
+const CUSTOMER_KEY = 'bloom-and-glow-customer';
 
 export default function CartPage() {
   const {
@@ -22,13 +24,21 @@ export default function CartPage() {
 
   const [step, setStep] = useState<CheckoutStep>('cart');
   const [channel, setChannel] = useState<CheckoutChannel>(null);
-  const [customerDetails, setCustomerDetails] = useState({
-    name: '',
-    phone: '',
-    address: '',
-    notes: '',
+  const [customerDetails, setCustomerDetails] = useState(() => {
+    try {
+      const saved = localStorage.getItem(CUSTOMER_KEY);
+      if (saved) {
+        return { name: '', phone: '', address: '', notes: '', ...JSON.parse(saved) };
+      }
+    } catch {}
+    return { name: '', phone: '', address: '', notes: '' };
   });
   const [isCopied, setIsCopied] = useState(false);
+
+  // Persist customer details to localStorage on every change
+  useEffect(() => {
+    localStorage.setItem(CUSTOMER_KEY, JSON.stringify(customerDetails));
+  }, [customerDetails]);
 
   if (state.items.length === 0 && step === 'cart') {
     return (

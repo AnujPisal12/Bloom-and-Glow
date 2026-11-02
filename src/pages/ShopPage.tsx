@@ -115,6 +115,29 @@ export default function ShopPage() {
 
           {/* ── Products Area ────────────────────────────────── */}
           <div className="flex-1">
+            {/* Raas Glow Festive Banner on Shop Page */}
+            {activeCategory === 'raas-glow' && (
+              <div className="mb-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-chocolate via-[#5a2c00] to-chocolate text-ivory shadow-xl border border-peach/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span className="px-3 py-1 bg-amber-600 text-ivory text-[10px] font-extrabold uppercase tracking-widest rounded-full mb-2 inline-block shadow-sm">
+                    ✨ FESTIVE OFFER
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold text-peach-light">रास Glow Navratri Special</h3>
+                  <p className="text-sm text-ivory/90 mt-1">
+                    Standard: <strong className="text-peach-light">₹219 per pair</strong> • Special Festive Deal: <strong className="text-white">BUY 9 PAIRS</strong> for just <strong className="text-peach">₹1,699</strong>!
+                  </p>
+                  <p className="text-xs text-ivory/70 mt-1">
+                    Authentic Kutchi mirror work, cowrie shells, and shimmering scented wax.
+                  </p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl border border-white/15 text-center sm:text-right flex-shrink-0">
+                  <span className="text-xs text-ivory/70 line-through mr-1.5">₹1,999</span>
+                  <span className="text-2xl font-serif font-black text-peach">₹1,699</span>
+                  <p className="text-[11px] text-peach-light font-medium">just ₹189 / pair</p>
+                </div>
+              </div>
+            )}
+
             {/* Toolbar */}
             <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
               <div className="flex items-center gap-3">

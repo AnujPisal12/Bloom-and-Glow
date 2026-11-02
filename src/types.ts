@@ -37,13 +37,12 @@ export interface Product {
 }
 
 export type ProductCategory =
-  | 'bloomy-glow-shots'
   | 'solid-candles'
-  | 'customised-layered'
-  | 'bloom-light-candles'
-  | 'bloomlit-diyas'
+  | 'layered-candles'
+  | 'traditional-diya'
   | 'diwali-hampers'
-  | 'raas-glow';
+  | 'raas-glow'
+  | 'sweet-box';
 
 export interface CategoryInfo {
   slug: ProductCategory;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Minus, Plus, ArrowLeft, Clock, Check, ChevronRight, MessageCircle, Sparkles } from 'lucide-react';
 import { getProductBySlug, getProductsByCategory, formatPrice } from '../data/products';
@@ -10,7 +10,7 @@ import { WHATSAPP_DISPLAY } from '../utils/checkout';
 export default function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const { addItem, setCartOpen } = useCart();
+  const { state, addItem, setCartOpen } = useCart();
 
   const product = getProductBySlug(slug || '');
 
@@ -20,7 +20,23 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [customizations, setCustomizations] = useState<Record<string, string>>({});
   const [isAdded, setIsAdded] = useState(false);
+
+  // Check if current variant is already in cart
+  const cartItemForVariant = state.items.find(
+    item => item.product.id === product?.id && (item.variant?.id ?? null) === (selectedVariant?.id ?? null)
+  );
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  // Reset page state whenever slug changes (e.g. clicking related products)
+  useEffect(() => {
+    if (product) {
+      setSelectedVariant(product.variants.length > 0 ? product.variants[0] : null);
+      setQuantity(1);
+      setCustomizations({});
+      setActiveImageIndex(0);
+      setIsAdded(false);
+    }
+  }, [slug]);
 
   if (!product) {
     return (
@@ -84,7 +100,7 @@ export default function ProductDetailPage() {
           <div className="animate-fade-in" id="product-gallery">
             <div className="aspect-square rounded-2xl overflow-hidden bg-cream border border-taupe/10">
               <img
-                src={product.images[activeImageIndex]}
+                src={product.images[activeImageIndex] || product.images[0]}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
@@ -126,11 +142,18 @@ export default function ProductDetailPage() {
             </h1>
 
             {/* Price */}
-            <div className="mb-6 flex items-baseline gap-3">
+            <div className="mb-4 flex items-baseline gap-3">
               {product.priceOnRequest ? (
                 <span className="text-lg font-medium text-muted-brown italic">Price on request</span>
               ) : unitPrice !== null ? (
-                <span className="text-3xl font-serif font-bold text-chocolate">{formatPrice(unitPrice)}</span>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-serif font-bold text-chocolate">{formatPrice(unitPrice)}</span>
+                  {product.id === 'rg-001' && (
+                    <span className="text-sm font-normal text-muted-brown">
+                      {selectedVariant?.id === 'rg-001-9pair' ? '(9 pairs pack)' : 'per pair'}
+                    </span>
+                  )}
+                </div>
               ) : null}
               {product.comingSoon && (
                 <span className="text-xs font-medium text-amber-800 bg-amber-100 px-2.5 py-1 rounded-md border border-amber-200">
@@ -138,6 +161,45 @@ export default function ProductDetailPage() {
                 </span>
               )}
             </div>
+
+            {/* Raas Glow Dedicated Festive Offer Card */}
+            {product.id === 'rg-001' && (
+              <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-amber-50 via-peach/15 to-amber-100/60 border-2 border-amber-400/80 shadow-md">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <span className="px-3 py-1 bg-amber-600 text-ivory text-[11px] font-extrabold uppercase tracking-wider rounded-full shadow-sm flex items-center gap-1.5">
+                    <Sparkles size={13} />
+                    FESTIVE OFFER
+                  </span>
+                  <span className="text-xs font-semibold text-amber-800 uppercase tracking-wider">
+                    Navratri Collection
+                  </span>
+                </div>
+
+                <div className="mt-3 mb-2 flex items-baseline gap-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-200/80 px-2.5 py-1 rounded-md">
+                    BUY 9 PAIRS
+                  </span>
+                  <span className="text-2xl sm:text-3xl font-serif font-black text-amber-950">
+                    ₹1,699
+                  </span>
+                  <span className="text-base text-muted-brown/70 line-through">
+                    ₹1,999
+                  </span>
+                  <span className="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 rounded-full">
+                    just ₹189 / pair
+                  </span>
+                </div>
+
+                <p className="text-xs text-amber-950/85 leading-relaxed mt-2 mb-3">
+                  Celebrate Navratri with the complete set of 9 handcrafted mirror-embroidered pairs! Poured with scented wax, real cowrie shells, and pearls.
+                </p>
+
+                <div className="pt-2 border-t border-amber-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-muted-brown">
+                  <span>✨ <em>Tip: Select the <strong>"Festive Offer: 9 Pairs"</strong> option below to claim this deal.</em></span>
+                  <span className="text-chocolate font-medium">For bulk orders, price can be discussed.</span>
+                </div>
+              </div>
+            )}
 
             {/* Coming Soon Notice Card */}
             {product.comingSoon && (
@@ -245,7 +307,15 @@ export default function ProductDetailPage() {
             {/* Quantity (Hidden if Coming Soon) */}
             {!product.comingSoon && (
               <div className="mb-8">
-                <label className="block text-sm font-semibold text-chocolate mb-2">Quantity</label>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="text-sm font-semibold text-chocolate">Quantity</label>
+                  {cartItemForVariant && (
+                    <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full flex items-center gap-1 animate-fade-in">
+                      <Check size={12} />
+                      {cartItemForVariant.quantity} already in cart
+                    </span>
+                  )}
+                </div>
                 <div className="inline-flex items-center bg-white border border-taupe/20 rounded-full">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}

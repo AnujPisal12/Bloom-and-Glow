@@ -243,23 +243,25 @@ export default function HomePage() {
       </section>
 
       {/* ── New Arrivals ───────────────────────────────────────── */}
-      <section className="py-16 sm:py-24 bg-ivory" id="new-arrivals">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="font-script text-xl text-peach-dark mb-2">Fresh additions</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-chocolate mb-4">New Arrivals</h2>
-            <div className="botanical-divider max-w-xs mx-auto">
-              <span className="text-peach">✦</span>
+      {newArrivals.length > 0 && (
+        <section className="py-16 sm:py-24 bg-ivory" id="new-arrivals">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <p className="font-script text-xl text-peach-dark mb-2">Fresh additions</p>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-chocolate mb-4">New Arrivals</h2>
+              <div className="botanical-divider max-w-xs mx-auto">
+                <span className="text-peach">✦</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+              {newArrivals.slice(0, 6).map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
             </div>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-            {newArrivals.slice(0, 6).map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── Brand Story ────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 bg-blush watercolor-bg" id="brand-story">
