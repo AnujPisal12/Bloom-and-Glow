@@ -36,7 +36,7 @@ const rawCategories: CategoryInfo[] = [
   },
   {
     slug: 'raas-glow',
-    name: 'Raas Glow — Navratri Collection',
+    name: 'Raas Glow',
     description: 'Festive Navratri collection — ₹219 per pair. 🎉 FESTIVE OFFER: BUY 9 PAIRS for ₹1699 (was ₹1999 — just ₹189/pair)!',
     image: '/images/products/raas_glow_mirror_cups.jpg',
   },
@@ -190,10 +190,10 @@ const rawProducts: Product[] = [
     newArrival: false,
   },
 
-  // ── 5. Raas Glow — Navratri Collection ────────────────────
+  // ── 5. Raas Glow ──────────────────────────────────────────
   {
     id: 'rg-001',
-    name: 'Raas Glow — Navratri Collection',
+    name: 'Raas Glow',
     slug: 'raas-glow',
     category: 'raas-glow',
     description: 'Festive Navratri collection candle cups wrapped in authentic Kutchi mirror embroidery, real cowrie shells, and pearls, poured with shimmering scented wax. Festive Offer: Buy 9 pairs for just ₹1699 (was ₹1999 — save ₹300)!',
